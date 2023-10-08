@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WizBooks.com</title>
+</head>
+<body>
+    
+
+    <section id="welcome">
+        <div class="welcome-content">
+          
+            <h2>Welcome to WizBooks</h2>
+        </div>
+    </section>
+
+    <section id="home">
+       
+        <br>
+        <br>
+        <div class="book-grid">
+            <div class="book" id="book1">
+                <img src="1.jpg" alt="Book 1">
+                <p>The Third Wheel</p>
+                <p class="price">₹20</p>
+                <button class="add-to-cart" data-title="The Third Wheel" data-price="20 Rupee">Add to Cart</button>
+            </div>
+            <br>
+            <div class="book" id="book1">
+                <img src="2.jpg" alt="Book 1">
+                <p>Old school</p>
+                <p class="price">₹20</p>
+                <button class="add-to-cart" data-title="Old school" data-price="20 Rupee">Add to Cart</button>
+            </div>
+            <br>
+            <div class="book" id="book1">
+                <img src="3.jpg" alt="Book 1">
+                <p>The last Straw</p>
+                <p class="price">₹20</p>
+                <button class="add-to-cart" data-title="The last Straw" data-price="20 Rupee">Add to Cart</button>
+            </div>
+            <br>
+            <div class="book" id="book1">
+                <img src="4.jpg" alt="Book 1">
+                <p>Big Shot</p>
+                <p class="price">₹20</p>
+                <button class="add-to-cart" data-title="Big Shot" data-price="20 Rupee">Add to Cart</button>
+            </div>
+            <br>
+            <div class="book" id="book1">
+                <img src="5.jpg" alt="Book 1">
+                <p>Hard Luck</p>
+                <p class="price">₹20</p>
+                <button class="add-to-cart" data-title="Hard Luck" data-price="20 Rupee">Add to Cart</button>
+            </div>
+            <br>
+            <div class="book" id="book1">
+                <img src="6.jpg" alt="Book 1">
+                <p>Do-It-Yourself</p>
+                <p class="price">₹20</p>
+                <button class="add-to-cart" data-title="Do-It-Yourself" data-price="20 Rupee">Add to Cart</button>
+            </div>
+    </section>
+
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+           
+        </div>
+        <button id="razorpay-payment-button" class="attractive-button">CheckOut</button>
+
+        
+
+
+        <div id="download-link-container"></div>
+    </section>
+
+    <div id="download-links">
+        
+        
+    </div>
+
+    
+    
+
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</body>
+</html>

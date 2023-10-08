@@ -1,0 +1,406 @@
+/* Reset some default browser styles */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fallback font */
+    background-color: #f9f9f9;
+}
+
+/* Add advanced navigation styles */
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 15px 0;
+    position: relative;
+}
+
+nav a {
+    font-family: 'Open Sans', sans-serif; /* Apply custom font */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff5733;
+}
+
+nav a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Remove the border and padding for the header-container */
+.header-container {
+    border: none;
+    padding: 0;
+    text-align: center;
+    height: 70px; /* Set a fixed height to adjust spacing */
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive; /* Apply custom font */
+    font-size: 28px;
+}
+
+/* ... (rest of your CSS styles) ... */
+
+
+section {
+    padding: 20px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.book {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Adjust the size of book images */
+.book img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Style for the "Add to Cart" button */
+.add-to-cart {
+    font-family: 'Open Sans', sans-serif; /* Apply custom font */
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+    background-color: #e74c3c;
+}
+
+/* Style for the added "Add to Cart" button */
+.added-to-cart {
+    background-color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/* Style for the cart section */
+#cart {
+    padding: 20px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.cart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cart img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.cart-content {
+    flex-grow: 1;
+}
+
+.cart-title {
+    font-family: 'Pacifico', cursive; /* Apply custom font */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cart-price {
+    font-size: 16px;
+    color: #ff5733;
+}
+
+.cart-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.remove-item {
+    color: #ff5733;
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.remove-item:hover {
+    color: #e74c3c;
+}
+
+.add-back {
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.add-back:hover {
+    color: #0056b3;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ... (previous styles) ... */
+
+/* Style for the "Proceed to Pay" button */
+#proceed-to-pay {
+    font-family: 'Open Sans', sans-serif; /* Apply custom font */
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#proceed-to-pay:hover {
+    background-color: #45a049;
+}
+
+/* Style for the download link container */
+#download-link-container {
+    margin-top: 20px;
+    display: none; /* Initially hide the container */
+}
+
+#download-link-container a {
+    font-family: 'Open Sans', sans-serif; /* Apply custom font */
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#download-link-container a:hover {
+    background-color: #0073a8;
+}
+
+
+/* Add styles for the welcome section */
+#welcome {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent grayish background */
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container {
+    text-align: center;
+}
+
+.logo {
+    max-width: 100px; /* Adjust the logo size */
+    opacity: 0; /* Start with 0 opacity for fading effect */
+    animation: fade-in 2s ease-in-out 1s forwards;
+}
+
+.welcome-container h2 {
+    font-family: 'Pacifico', cursive; /* Apply custom font */
+    font-size: 28px;
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent line breaks */
+    animation: typewriter 5s steps(40) 1s 1 normal both, blink-text-caret 0.7s steps(1) infinite;
+}
+
+/* Define the fading in animation for the logo */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modify the typewriter and blinking cursor animations as shown previously */
+
+
+.attractive-button {
+    background-color: #ff5733; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Add a pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effect */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Make it a block element to center it */
+}
+
+/* Hover effect for the button */
+.attractive-button:hover {
+    background-color: #ff4022; /* Change background color on hover */
+    transform: scale(1.05); /* Increase size on hover */
+}
+
+/* Center the button vertically */
+#razorpay-payment-button {
+    margin-top: 20px;
+}
+
+
+/* CSS for Desktop (Larger Screens) */
+@media (min-width: 768px) {
+    /* Hide mobile navigation button on larger screens */
+    .mobile-nav-toggle {
+        display: none;
+    }
+
+    /* Display navigation links on larger screens */
+    nav ul {
+        display: block;
+    }
+
+    /* Hide mobile navigation menu on larger screens */
+    nav ul.active {
+        display: none;
+    }
+}
+
+/* CSS for Mobile (Smaller Screens) */
+@media (max-width: 767px) {
+    /* Display mobile navigation button on smaller screens */
+    .mobile-nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 101;
+    }
+
+    /* Hide navigation links on smaller screens */
+    nav ul {
+        display: none;
+    }
+
+    /* Style for the mobile navigation menu */
+    nav ul.active {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Style for the download links */
+/* Style for the links within the #download-links container */
+/* Center-align the download links within the #download-links container */
+#download-links {
+    text-align: center; /* Center-align the content horizontally */
+}
+
+/* Style for the links within the #download-links container */
+#download-links a {
+    font-family: 'Open Sans', sans-serif; /* Apply custom font */
+    background-color: #4CAF50; /* Green background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    text-decoration: none;
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add a pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effect */
+    display: inline-block; /* Display as an inline-block element */
+    margin-right: 10px; /* Add right margin for spacing between buttons */
+}
+
+/* Hover effect for the links within the #download-links container */
+#download-links a:hover {
+    background-color: #45a049; /* Change background color on hover */
+    transform: scale(1.05); /* Increase size on hover */
+}
